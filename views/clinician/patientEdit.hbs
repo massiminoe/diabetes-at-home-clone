@@ -1,0 +1,140 @@
+<section class="page-content">
+
+  <div class="title-card">
+      {{!-- gotta find the patients name as well --}}
+  <h2>Edit Patient - {{firstName}} {{lastName}}</h2>  <!-- patient name -->
+  </div>
+
+
+        <div>
+
+        <table class = "clinician-table">
+
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr>
+                <td>{{firstName}}</td>
+                <td>{{lastName}}</td>
+            </tr>
+            
+        </table>
+
+    </div>
+
+    <div> 
+
+        <ul class="button-list">
+            <li>
+                <button
+                    class="button">Included</button>
+            </li>
+                <li>
+                <button
+                    class="button">Included</button>
+            </li>      <li>
+                <button
+                    class="button">Included</button>
+            </li>      <li>
+                <button
+                    class="button">Included</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class = 'right'>
+            <ul class = "button-list">
+
+                <li>
+            <table class="clinician-table ex1">
+                
+            <tr>
+                <th>Blood Glucose Level (nmol/L) </th>
+                <th>Lower Threshold</th>
+                <th>Upper Threshold</th>
+            </tr>
+
+
+                <tr>
+                        <td></td>
+                        <td>{{glucoseMin}}</td>
+                        <td>{{glucoseMax}}</td>
+
+                </tr>
+
+                
+            </table>
+        </li>
+        <li>
+            <table class="clinician-table ex1">
+            <tr>
+                <th>Weight (kg)</th>
+                <th>Lower Threshold</th>
+                <th>Upper Threshold</th>
+            </tr>
+
+
+                <tr>
+                        <td></td>
+                        <td>{{weightMin}}</td>
+                        <td>{{weightMax}}</td>
+
+                </tr>
+                    </table>
+        </li>
+        <li>
+                <table class="clinician-table ex1">
+            <tr>
+                <th>Insulin Doses Taken</th>
+                <th>Lower Threshold</th>
+                <th>Upper Threshold</th>
+            </tr>
+
+
+                <tr>
+                        <td></td>
+                        <td>{{insulinMin}}</td>
+                        <td>{{insulinMax}}</td>
+
+                </tr>
+        </li>
+        <li>
+                
+            </table>
+        <table class="clinician-table ex1">
+            <tr>
+                <th>Steps Taken</th>
+                <th>Lower Threshold</th>
+                <th>Upper Threshold</th>
+            </tr>
+
+
+                <tr>
+                        <td></td>
+                        <td>{{exerciseMin}}</td>
+                        <td>{{exerciseMax}}</td>
+
+                </tr>
+
+                
+            </table>
+
+        </li>
+                
+            </ul>
+  </div>
+
+
+<a href='/clinician/{{clinicianId}}/patient/{{patientId}}/view'>
+    <button 
+    name="back" 
+    class="button bottomLeft">Back</button></a>
+
+ 
+<button 
+    name="back" 
+    class="button bottomRight">Confirm Changes</button>
+
+</section>

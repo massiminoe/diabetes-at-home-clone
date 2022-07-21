@@ -1,0 +1,34 @@
+<section class="page-content">
+ <div class="title-card">
+        <h2>Notes - {{firstName}} {{lastName}}</h2>
+    </div>        
+     <div class="clinician-flexbox">
+
+    <table class="clinician-table">
+        <tr>
+            <th>Date</th>
+            <th>Note</th>
+        </tr>
+
+        {{#each notes}}
+        <tr>
+            <td>{{date}}</td>
+            <td>{{note}}</td>
+        </tr>
+        {{/each}}
+
+    </table>
+
+  </div>
+
+
+<a href='/clinician/{{clinicianId}}/patient/{{patientId}}/view'>
+    <button 
+    name="back" 
+    class="button bottomLeft">Back</button></a>
+
+      <button 
+    name="confirm" 
+    class="button bottomLeft">Confirm Changes</button></a>
+
+</section>

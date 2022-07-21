@@ -1,0 +1,69 @@
+<section class="page-content">
+
+  <div class="title-card">
+      {{!-- gotta find the patients name as well --}}
+  <h2> {{firstName}} {{lastName}} </h2>  <!-- patient name -->
+  </div>
+
+
+  <div class="clinician-flexbox">
+
+
+    <table class="clinician-table">
+      <tr>
+        <th>Date</th>
+        <th>Blood Glucose Level (nmol/L)</th>
+        <th>Weight (kg)</th>
+        <th>Insulin Doses Taken</th>
+        <th>Steps Taken</th>
+      </tr>
+
+      {{#each data}}
+
+        <tr>
+                <td>{{date}}</td>
+                <td {{#if glucoseOutThresh}}class="highlight"{{/if}}>{{glucose}}</td>
+                <td {{#if weightOutThresh}}class="highlight"{{/if}}>{{weight}}</td>
+                <td {{#if insulinOutThresh}}class="highlight"{{/if}}>{{insulin}}</td>
+                <td {{#if exerciseOutThresh}}class="highlight"{{/if}}>{{exercise}}</td>
+        </tr>
+      {{/each}}
+
+          
+    </table>
+
+    
+
+{{!-- buttons not finished need to be referenced to correct pages and named properly --}}
+
+    <ul class="button-list">
+      <li> 
+        <a href="/clinician/{{clinicianId}}/patient/{{patientId}}/edit"><button 
+            name="edit patient"
+            class="button"
+          >Edit Patient</button></a>
+      </li>
+      <li>
+        <a href="/clinician/{{clinicianId}}/patient/{{patientId}}/notes"><button 
+            name="comments"
+            class="button"
+          >Clinician notes</button></a>
+      </li>
+      <li>
+        <a href="/clinician/{{clinicianId}}/patient/{{patientId}}/setmessage"><button 
+            name="set message"
+            class="button"
+          >Set Patient Message</button></a>         
+      </li> 
+      <li>
+           <a href="/clinician/{{clinicianId}}/dashboard"><button
+            name="dashboard button"
+            class="button"
+          >Back to Dashboard</button></a>
+
+      </li>
+    </ul>
+
+ 
+
+</section>

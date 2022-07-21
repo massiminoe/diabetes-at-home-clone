@@ -1,0 +1,78 @@
+<section class="page-content">
+
+  <div class="title-card">
+      <h2>Create Patient</h2>
+  </div>
+
+  <div class="create-patient">
+    <div class="record-title">New Patient</div>
+    <form action="./register_patient/created" method="post">
+
+      <div class="record-card">
+        <div class="record-prompt">First Name</div>
+        <div class="form-element">
+          <input class="record-input" type="text" name="firstname" id="fname" placeholder="Pat" required /> 
+        </div>
+        <div class="record-prompt">Last Name</div>
+        <div class="form-element"><br>
+          <input class="record-input" type="text" name="lastname" id="lname" placeholder="Tester" required/>
+        </div>
+        <div class="record-prompt">Email</div>
+        <div class="form-element"><br>
+          <input class="record-input" type="email" name="email" id="email" placeholder="pat.test@gmail.com" required/>
+        </div>
+        <div class="record-prompt">Birthday</div>
+        <div class="form-element"><br>
+          <input class="record-input" type="date" name="birthday" id="birthday" required/>
+        </div>
+        <div class="record-prompt">Screen Name</div>
+        <div class="form-element"><br>
+          <input class="record-input" type="text" name="screenname" id="sname" placeholder="PatT"/>
+        </div>
+        <div class="record-prompt">Bio</div>
+        <div class="form-element"><br>
+          <input class="record-input" type="text" name="bio" id="bio" placeholder="Brief bio of Patient..."/>
+        </div>
+        <div class="record-prompt">Support Message</div>
+        <div class="form-element"><br>
+          <input class="record-input" type="text" name="supportmessage" id="smessage" placeholder="Have a great day Pat"/>
+        </div>
+      </div>
+
+      <div class="record-card">
+        <div class="record-prompt">Thresholds (Leave empty if not required)</div>
+        <div class="form-element" id="moreText">Glucose Thresholds<br>
+          <input class="record-input" type="number" name="minGlucose" id="minGlucose" placeholder="Min" MIN/>
+          <input class="record-input" type="number" name="maxGlucose" id="maxGlucose" placeholder="Max" MAX/>
+        </div>
+        <div class="form-element" id="moreText">Weight Thresholds<br>
+          <input class="record-input" type="number" name="minWeight" id="minWeight" placeholder="Min" MIN/>
+          <input class="record-input" type="number" name="maxWeight" id="maxWeight" placeholder="Max" MAX/>
+        </div>
+        <div class="form-element" id="moreText"> Doses of Insulin Taken<br>
+          <input class="record-input" type="number" name="minInsulin" id="minInsulin" placeholder="Min" MIN/>
+          <input class="record-input" type="number" name="maxInsulin" id="maxInsulin" placeholder="Max" MAX/>
+        </div>
+        <div class="form-element" id="moreText">Exercise Thresholds<br>
+          <input class="record-input" type="number" name="minExercise" id="minExercise" placeholder="Min" MIN/>
+          <input class="record-input" type="number" name="maxExercise" id="maxExercise" placeholder="Max" MAX/>
+        </div>
+      </div>
+
+      <div class="record-card">
+        <div class="record-prompt">Password</div>
+        <div class="form-element"><br>
+        Must be 8 letters long with at minimum one upper case letter and one number
+          <input class="record-input" type="password" name="password" id="password" placeholder="********" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"required/>
+        </div>
+      </div>
+
+
+      <button class="button" type="submit">Create</button>
+    </form>
+  </div>
+  
+
+    
+   
+</section>
